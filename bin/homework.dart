@@ -11,13 +11,13 @@ void main () {
   print("Курс на сегодня:\n"
         "Доллар США 84.8 сом\n"
         "Евро 101.1113 сом\n"
-        "Российский рубль 1.1438\n"
+        "Российский рубль 1.1438 сом\n"
         "Тенге 1.1438 сом\n"
         "Юань 12 сом\n"
         "Фунты 108 сом\n"
         "1) Хотите обменять другую валюту на сом!\n"
-        "2) Хотите обменять сом на другую валюту!\n"
-        "Ввод: ");
+        "2) Хотите обменять сом на другую валюту!\n");
+  stdout.write("Ввод: ");
 
   int choice = int.parse(stdin.readLineSync()!);
   if (choice == 1) {
@@ -27,39 +27,39 @@ void main () {
           "RUB\n"
           "KZT\n"
           "CNY\n"
-          "GBP\n"
-          "Ввод:\n");
+          "GBP\n");
+          stdout.write("Ввод: ");
     String currency = stdin.readLineSync()!;
     if (currency == "USD") {
-      print("Сколько Долларов хотите поменять?\n"
-      "Ввод: ");
+      print("Сколько Долларов хотите поменять?\n");
+      stdout.write("Ввод: ");
       double price = double.parse(stdin.readLineSync()!);
-      print("Обмен $price $currency на ${price / usd} сом");
+      print("Обмен $price $currency на ${price * usd} сом");
     } else if (currency == "EUR") {
-      print("Сколько Евро хотите поменять?\n"
-      "Ввод: ");
+      print("Сколько Евро хотите поменять?\n");
+      stdout.write("Ввод: ");
       double price = double.parse(stdin.readLineSync()!);
-      print("Обмен $price $currency на ${price / eur} сом");
+      print("Обмен $price $currency на ${price * eur} сом");
     } else if (currency == "RUB") {
-      print("Сколько Рублей хотите поменять?\n"
-      "Ввод: ");
+      print("Сколько Рублей хотите поменять?\n");
+      stdout.write("Ввод: ");
       double price = double.parse(stdin.readLineSync()!);
-      print("Обмен $price $currency на ${price / rub} сом");  
+      print("Обмен $price $currency на ${price * rub} сом");  
     } else if (currency == "KZT") {
-      print("Сколько Тенге хотите поменять?\n"
-      "Ввод: ");
+      print("Сколько Тенге хотите поменять?\n");
+      stdout.write("Ввод: ");
       double price = double.parse(stdin.readLineSync()!);
-      print("Обмен $price $currency на ${price / kzt} сом");  
+      print("Обмен $price $currency на ${price * kzt} сом");  
     } else if (currency == "CNY") {
-      print("Сколько Юаней хотите поменять?\n"
-      "Ввод: ");
+      print("Сколько Юаней хотите поменять?\n");
+      stdout.write("Ввод: ");
       double price = double.parse(stdin.readLineSync()!);
-      print("Обмен $price $currency на ${price / cny} сом"); 
+      print("Обмен $price $currency на ${price * cny} сом"); 
     } else if (currency == "GBP") {
-      print("Сколько Фунтов хотите поменять?\n"
-      "Ввод: ");
+      print("Сколько Фунтов хотите поменять?\n");
+      stdout.write("Ввод: ");
       double price = double.parse(stdin.readLineSync()!);
-      print("Обмен $price $currency на ${price / gbp} сом"); 
+      print("Обмен $price $currency на ${price * gbp} сом"); 
     } else {
       print("Ошибка. Попробуйте заново");
     }
@@ -70,39 +70,39 @@ void main () {
           "RUB\n"
           "KZT\n"
           "CNY\n"
-          "GBP\n"
-          "Ввод:\n");
+          "GBP\n");
+          stdout.write("Ввод: ");
           String currency = stdin.readLineSync()!;
           if (currency == "USD") {
-            print("Сколько Долларов хотите купить?\n"
-                  "Ввод: ");
+            print("Сколько Долларов хотите купить?\n");
+                  stdout.write("Ввод: ");
                   double price = double.parse(stdin.readLineSync()!);
-                  print("Обмен ${price * usd} сом на $price $currency");
+                  print("Обмен ${price / usd} сом на $price $currency");
           } else if (currency == "EUR") {
-            print("Сколько Евро хотите купить?\n"
-                  "Ввод: ");
+            print("Сколько Евро хотите купить?\n");
+                  stdout.write("Ввод: ");
                   double price = double.parse(stdin.readLineSync()!);
-                  print("Обмен ${price * eur} сом на $price $currency");
+                  print("Обмен ${price / eur} сом на $price $currency");
           } else if (currency == "RUB") {
-                  print("Сколько Рублей хотите купить?\n"
-                  "Ввод: ");
+                  print("Сколько Рублей хотите купить?\n");
+                  stdout.write("Ввод: ");
                   double price = double.parse(stdin.readLineSync()!);
-                  print("Обмен ${price * rub} сом на $price $currency");
+                  print("Обмен ${price / rub} сом на $price $currency");
           } else if (currency == "KZT") {
-                  print("Сколько Тенге хотите купить?\n"
-                  "Ввод: ");
+                  print("Сколько Тенге хотите купить?\n");
+                  stdout.write("Ввод: ");
                   double price = double.parse(stdin.readLineSync()!);
-                  print("Обмен ${price * kzt} сом на $price $currency");
+                  print("Обмен ${price / kzt} сом на $price $currency");
           } else if (currency == "CNY") {
-                  print("Сколько Юаней хотите купить?\n"
-                  "Ввод: ");
+                  print("Сколько Юаней хотите купить?\n");
+                  stdout.write("Ввод: ");
                   double price = double.parse(stdin.readLineSync()!);
-                  print("Обмен ${price * cny} сом на $price $currency");
+                  print("Обмен ${price / cny} сом на $price $currency");
           } else if (currency == "GBP") {
-                  print("Сколько Фунтов хотите купить?\n"
-                  "Ввод: ");
+                  print("Сколько Фунтов хотите купить?\n");
+                  stdout.write("Ввод: ");
                   double price = double.parse(stdin.readLineSync()!);
-                  print("Обмен ${price * gbp} сом на $price $currency");
+                  print("Обмен ${price / gbp} сом на $price $currency");
           } else {
             print("Ошибка. Попробуйте заново");
           }
